@@ -20,17 +20,20 @@ const Pendulum = ({ gravity, length }) => {
 		<div
 			style={{
 				position: 'absolute',
-				left: '45%',
-				bottom: '100px',
+				left: '48%',
+				bottom: '-40%',
 				height: '80vh',
 				zIndex: '100',
 			}}
 		>
 			<div
+				className='pendiliumBg'
 				style={{
-					width: '2px',
+					width: '29.5px',
 					height: `${length * 50}px`, // Scale length for display
-					backgroundColor: 'black',
+					objectFit: 'cover',
+					backgroundSize: 'contain',
+					backgroundRepeat: 'no-repeat',
 					transform: `rotate(${angle}deg)`,
 					transformOrigin: 'top',
 					transition: 'transform 0.05s linear',

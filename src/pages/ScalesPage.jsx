@@ -7,11 +7,10 @@ const ScalesPage = () => {
 	const [draggingWeight, setDraggingWeight] = useState(null)
 
 	return (
-		<div>
+		<div className='scales-main'>
 			<ScalesTheory />
 			<div
 				style={{
-					backgroundColor: '#4a5c69',
 					height: '80vh',
 				}}
 				className='flex-row rounded-md'

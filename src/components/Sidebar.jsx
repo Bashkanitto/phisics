@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 						<a href='/magnet'>Магнит</a>
 					</li>
 					<li className='menu-item'>
-						<a href='/scales'>Весы</a>
+						<a href='/scales'>Таразы</a>
 					</li>
 					<li className='menu-item'>
 						<a href='/pendulum'>Маятник</a>

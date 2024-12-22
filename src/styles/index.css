@@ -67,3 +67,18 @@ p {
 h3 {
 	color: whites;
 }
+
+.pendiliumBg {
+	background-image: url('../../public/item.png');
+	background-size: cover;
+}
+
+.scales-main {
+	border-radius: 50px;
+	background-image: url('../../public/desktop.png');
+	background-size: cover;
+}
+
+h5 {
+	font-weight: 400;
+}

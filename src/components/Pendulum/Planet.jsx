@@ -1,11 +1,11 @@
 import React from 'react'
 
 const planets = {
-	Earth: 9.81,
-	Moon: 1.62,
-	Jupiter: 24.79,
-	Mercury: 3.7,
-	Pluto: 0.62,
+	Жер: 9.81,
+	Ай: 1.62,
+	Юпитер: 24.79,
+	Меркурий: 3.7,
+	Плутон: 0.62,
 }
 
 const PlanetSelector = ({ setGravity }) => {

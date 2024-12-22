@@ -4,7 +4,7 @@ import '../../styles/Scales.css'
 const Scales = ({ draggingWeight }) => {
 	const [leftWeight, setLeftWeight] = useState(0)
 	const [rightWeight, setRightWeight] = useState(0)
-	const MAX_WEIGHT = 170
+	const MAX_WEIGHT = 120
 
 	const handleDrop = (side) => {
 		if (draggingWeight) {
@@ -13,7 +13,7 @@ const Scales = ({ draggingWeight }) => {
 					? draggingWeight
 					: draggingWeight === 'wood'
 					? 80
-					: 150
+					: 120
 
 			if (side === 'left') {
 				setLeftWeight((prev) => Math.min(prev + weightToAdd, MAX_WEIGHT))
@@ -23,19 +23,15 @@ const Scales = ({ draggingWeight }) => {
 		}
 	}
 
-	const resetScales = () => {
-		setLeftWeight(0)
-		setRightWeight(0)
-	}
-
 	const calculateRotation = () => {
 		const difference = leftWeight - rightWeight
-		return difference * 0.15
+		return difference * 0.12
 	}
+	const offsetX = calculateRotation() * -4 // Adjust factor (-10 for smaller shift)
+	const offsetY = calculateRotation() * -0.3 // Adjust factor (-10 for smaller shift)
 
 	return (
 		<div className='scales-container'>
-			<h2>Весы</h2>
 			<div className='scaleHands'>
 				{/* Scales Base */}
 				<img className='table' src='/table.png' alt='Base' />
@@ -46,8 +42,9 @@ const Scales = ({ draggingWeight }) => {
 					src='/tableHands.png'
 					alt='Arms'
 					style={{
-						transform: `rotate(${calculateRotation()}deg)`,
+						transform: `translateX(${offsetX}px) translateY(${offsetY}px) rotate(${calculateRotation()}deg)`,
 						transition: 'transform 0.3s ease',
+						transformOrigin: 'center bottom', // Pivot point for rotation
 					}}
 				/>
 			</div>
@@ -65,10 +62,6 @@ const Scales = ({ draggingWeight }) => {
 					onDragOver={(e) => e.preventDefault()}
 				></div>
 			</div>
-
-			<button className='resetButton' onClick={resetScales}>
-				Сбросить
-			</button>
 		</div>
 	)
 }
