@@ -1,0 +1,80 @@
+.scales-container {
+	display: flex;
+	flex-direction: column;
+	height: 250px;
+	align-items: center;
+}
+
+.scales {
+	display: flex;
+	justify-content: space-between;
+	width: 400px;
+	margin: 20px 0;
+}
+
+.scale-left {
+	position: absolute;
+	left: 0;
+}
+
+.scale-zones {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 100px;
+}
+
+.scale-left,
+.scale-right {
+	width: 170px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	position: relative;
+}
+
+.tilted {
+	transform: rotate(10deg);
+}
+
+.status {
+	margin: 100px 0;
+}
+
+.weights-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.weights {
+	display: flex;
+	gap: 10px;
+}
+
+.weight {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: grab;
+}
+
+.scaleHands {
+	position: relative;
+	height: 400px;
+}
+
+.table {
+	position: absolute;
+	top: 0;
+	left: -40px;
+}
+.tableHands {
+	position: absolute;
+	top: 0;
+	left: -180px;
+}
+
+.resetButton {
+	position: absolute;
+	bottom: 20%;
+}

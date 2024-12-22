@@ -1,0 +1,80 @@
+/* Основной контейнер для сайдбара */
+.sidebar-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 0px;
+	height: 100%;
+	background-color: #1b242bfa;
+	color: #ecf0f1;
+	transition: width 0.3s ease;
+	overflow: hidden;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+}
+
+/* Состояние открытого сайдбара */
+.sidebar-container.open {
+	width: 200px;
+}
+
+/* Кнопка открытия/закрытия */
+
+/* Содержание сайдбара */
+.sidebar {
+	padding: 20px 10px;
+}
+
+/* Заголовок сайдбара */
+.sidebar-title {
+	font-size: 1.5rem;
+	margin-bottom: 20px;
+	font-family: 'Arial', sans-serif;
+	text-transform: uppercase;
+}
+
+/* Список меню */
+.menu-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+/* Элемент меню */
+.menu-item {
+	margin: 15px 0;
+	transition: all 0.3s ease;
+}
+
+.menu-item a {
+	text-decoration: none;
+	color: #ecf0f1;
+	font-size: 1.2rem;
+	font-weight: bold;
+	display: block;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Анимация при наведении */
+.menu-item a:hover {
+	background-color: #28343dfa;
+}
+
+/* Добавляем плавное появление текста */
+.sidebar-container.open .menu-item a {
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+
+/* Скрывем текст в закрытом состоянии */
+.menu-item a {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+/* В открытом состоянии текст становится видимым */
+.sidebar-container.open .menu-item a {
+	opacity: 1;
+}

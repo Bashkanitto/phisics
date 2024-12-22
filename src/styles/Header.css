@@ -1,0 +1,19 @@
+header {
+	height: 10vh;
+}
+
+.sidebar-toggle {
+	position: absolute;
+	top: 20px;
+	left: 10%;
+	width: 30px;
+	font-size: 36px;
+	height: 30px;
+	color: #ecf0f1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	border-radius: 50%;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

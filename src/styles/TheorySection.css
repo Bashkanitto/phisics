@@ -1,0 +1,21 @@
+/* Основной контейнер для сайдбара */
+.theorySection {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 100%;
+	background-color: #1b242bc0;
+	color: #ecf0f1;
+	transition: width 0.3s ease;
+	overflow: hidden;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+	z-index: 1000;
+	padding: 20px 10px;
+	width: 500px;
+	overflow-y: scroll;
+}
+
+p {
+	font-size: 14px;
+	letter-spacing: 0.6px;
+}

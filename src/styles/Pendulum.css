@@ -1,0 +1,11 @@
+.pendulum-container {
+	width: 100%;
+	height: 100vh;
+	background: url('../../public/desktop.png') no-repeat;
+	background-size: cover;
+}
+
+.stand {
+	position: absolute;
+	bottom: 1%;
+}
