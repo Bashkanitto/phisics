@@ -4,7 +4,7 @@ import PendulumTheory from '../components/Pendulum/PendulumTheory'
 import PlanetSelector from '../components/Pendulum/Planet'
 import '../styles/Pendulum.css'
 
-const PendulumPage = () => {
+const PendulumPage = ({ isEnd }) => {
 	const [gravity, setGravity] = useState(9.81) // Default to Earth's gravity
 	const [length, setLength] = useState(4) // Default pendulum length (in meters)
 	const [time, setTime] = useState(0) // Total elapsed time
@@ -27,37 +27,39 @@ const PendulumPage = () => {
 	}, [gravity, length, time])
 
 	return (
-		<div
-			style={{
-				backgroundImage: `url("/desktop.png")`,
-			}}
-			className='pendulum-container'
-		>
-			<PendulumTheory />
-			<PlanetSelector setGravity={setGravity} />
+		<>
+			<PendulumTheory isEnd={isEnd} />
 			<div
 				style={{
-					marginBottom: '20px',
-					textAlign: 'center',
+					backgroundImage: `url("/desktop.png")`,
 				}}
+				className={`pendulum-container ${isEnd ? 'hide' : ''}`}
 			>
-				<img className='stand' width={150} src='/stand.png' alt='' />
-				<label style={{ color: 'black' }}>
-					Ұзындығы (m):
-					<input
-						type='number'
-						value={length}
-						onChange={(e) => setLength(Number(e.target.value))}
-						style={{ marginLeft: '10px', padding: '5px', fontSize: '16px' }}
-					/>
-				</label>
-				<div style={{ color: 'black', marginTop: '10px' }}>
-					<h5>Уақыт (t): {time.toFixed(2)} сек</h5>
-					<h5>Өту саны (n): {nTimes}</h5>
+				<PlanetSelector setGravity={setGravity} />
+				<div
+					style={{
+						marginBottom: '20px',
+						textAlign: 'center',
+					}}
+				>
+					<img className='stand' width={150} src='/stand.png' alt='' />
+					<label style={{ color: 'black' }}>
+						Ұзындығы (m):
+						<input
+							type='number'
+							value={length}
+							onChange={(e) => setLength(Number(e.target.value))}
+							style={{ marginLeft: '10px', padding: '5px', fontSize: '16px' }}
+						/>
+					</label>
+					<div style={{ color: 'black', marginTop: '10px' }}>
+						<h5>Уақыт (t): {time.toFixed(2)} сек</h5>
+						<h5>Өту саны (n): {nTimes}</h5>
+					</div>
 				</div>
+				<Pendulum gravity={gravity} length={length} />
 			</div>
-			<Pendulum gravity={gravity} length={length} />
-		</div>
+		</>
 	)
 }
 

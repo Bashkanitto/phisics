@@ -25,7 +25,7 @@ const Scales = ({ draggingWeight }) => {
 
 	const calculateRotation = () => {
 		const difference = leftWeight - rightWeight
-		return difference * 0.12
+		return difference * 0.15
 	}
 	const offsetX = calculateRotation() * -4 // Adjust factor (-10 for smaller shift)
 	const offsetY = calculateRotation() * -0.3 // Adjust factor (-10 for smaller shift)

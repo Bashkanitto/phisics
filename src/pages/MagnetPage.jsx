@@ -3,12 +3,14 @@ import MagneticPull from '../components/Magnets/MagneticPull'
 import MagneticPush from '../components/Magnets/MagneticPush'
 import MagnetTheory from '../components/Magnets/MagnetTheory'
 
-const MagnetPage = () => {
+const MagnetPage = ({ isEnd }) => {
 	return (
 		<>
-			<MagnetTheory />
+			<MagnetTheory isEnd={isEnd} />
 
-			<div className='flex column gap-10'>
+			<div
+				className={`magnet-container ${isEnd ? 'hide' : ''} flex column gap-10`}
+			>
 				<MagneticPull />
 				<MagneticPush />
 			</div>

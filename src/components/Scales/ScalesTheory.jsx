@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../styles/TheorySection.css'
 
-const ScalesTheory = () => {
+const ScalesTheory = ({ isEnd }) => {
 	const [resize, setResize] = useState(false)
 
 	function toggleResize() {
@@ -15,7 +15,7 @@ const ScalesTheory = () => {
 				padding: '20px',
 				borderRadius: '10px',
 			}}
-			className='theorySection'
+			className={`theorySection ${isEnd ? 'hideSide' : ''}`}
 		>
 			<h2>Теориялық бөлім: Таразы тепе-теңдігі</h2>
 			<p>

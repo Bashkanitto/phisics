@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../../styles/TheorySection.css'
 
-const MagnetTheory = () => {
+const MagnetTheory = ({ isEnd }) => {
 	const [resize, setResize] = useState(false)
 
 	function toggleResize() {
@@ -10,7 +10,7 @@ const MagnetTheory = () => {
 	return (
 		<div
 			onClick={toggleResize}
-			className='theorySection'
+			className={`theorySection ${isEnd ? 'hideSide' : ''}`}
 			style={{
 				width: resize && '200px',
 				padding: '20px',

@@ -13,7 +13,13 @@ const PlanetSelector = ({ setGravity }) => {
 		<div style={{ marginBottom: '20px' }}>
 			<select
 				onChange={(e) => setGravity(planets[e.target.value])}
-				style={{ padding: '10px', fontSize: '16px' }}
+				style={{
+					borderRadius: '30px',
+					border: 'none',
+					padding: '10px',
+					margin: '20px',
+					fontSize: '16px',
+				}}
 			>
 				{Object.keys(planets).map((planet) => (
 					<option key={planet} value={planet}>

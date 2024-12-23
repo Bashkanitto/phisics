@@ -8,20 +8,26 @@ import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
 	const [isOpen, setIsOpen] = useState(false)
+	const [isEnd, setIsEnd] = useState(false)
 
 	const toggleSidebar = () => {
 		setIsOpen(!isOpen)
 	}
+
 	return (
 		<div className='w-full'>
 			<Header toggleSidebar={toggleSidebar} />
-			<Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
+			<Sidebar
+				setIsEnd={setIsEnd}
+				isOpen={isOpen}
+				toggleSidebar={toggleSidebar}
+			/>
 			<main className='container'>
 				<Routes>
-					<Route path='/magnet' element={<MagnetPage />} />
-					<Route path='/scales' element={<ScalesPage />} />
-					<Route path='/pendulum' element={<PendulumPage />} />
-					<Route path='/' element={<MagnetPage />} />
+					<Route path='/magnet' element={<MagnetPage isEnd={isEnd} />} />
+					<Route path='/scales' element={<ScalesPage isEnd={isEnd} />} />
+					<Route path='/pendulum' element={<PendulumPage isEnd={isEnd} />} />
+					<Route path='/' element={<MagnetPage isEnd={isEnd} />} />
 				</Routes>
 			</main>
 		</div>

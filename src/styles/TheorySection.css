@@ -13,9 +13,44 @@
 	padding: 20px 10px;
 	width: 500px;
 	overflow-y: scroll;
+	animation: fadeFromLeft 0.2s;
 }
 
 p {
 	font-size: 14px;
 	letter-spacing: 0.6px;
+	animation: fadeFromRightText 1s;
+}
+
+h3 {
+	animation: fadeFromRightText 0.9s;
+}
+ul {
+	animation: fadeFromRightText 0.8s;
+}
+
+h2 {
+	animation: fadeFromRightText 0.8s;
+}
+
+@keyframes fadeFromRightText {
+	from {
+		transform: translatex(-500px);
+		transition: 0.5s;
+	}
+	to {
+		transform: translateY(0px);
+		transition: 0.5s;
+	}
+}
+
+@keyframes fadeFromLeft {
+	from {
+		transform: translatex(500px);
+		transition: 0.5s;
+	}
+	to {
+		transform: translateY(0px);
+		transition: 0.5s;
+	}
 }

@@ -56,6 +56,38 @@ body {
 	color: white;
 }
 
+@keyframes fadeOut {
+	from {
+		transform: translateY(100px);
+		transition: 0.5s;
+	}
+	to {
+		transform: translateY(0px);
+		transition: 0.5s;
+	}
+}
+
+@keyframes hide {
+	from {
+		transform: translateY(0);
+		transition: 0.5s;
+	}
+	to {
+		transform: translateY(-5000px);
+		transition: 0.5s;
+	}
+}
+
+@keyframes hideSide {
+	from {
+		transform: translateX(0);
+		transition: 0.5s;
+	}
+	to {
+		transform: translateX(5000px);
+		transition: 0.5s;
+	}
+}
 .container {
 	width: 80%;
 	margin: 0 auto;
@@ -81,4 +113,23 @@ h3 {
 
 h5 {
 	font-weight: 400;
+}
+
+.pendulum-container {
+	animation: fadeOut 1s;
+}
+
+.magnet-container {
+	animation: fadeOut 1s;
+}
+.scales-main {
+	animation: fadeOut 1s;
+}
+
+.hide {
+	animation: hide 1s;
+}
+
+.hideSide {
+	animation: hideSide 1s;
 }
