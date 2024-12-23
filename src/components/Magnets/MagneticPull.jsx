@@ -72,7 +72,7 @@ const MagneticPull = () => {
 
 	return (
 		<div
-			className='rounded-md'
+			className='rounded-md mag'
 			style={{
 				width: '100%',
 				height: '70vh',

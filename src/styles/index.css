@@ -107,7 +107,7 @@ h3 {
 
 .scales-main {
 	border-radius: 50px;
-	background-image: url('../../public/desktop.png');
+	background-image: url('../../public/desktop2.png');
 	background-size: cover;
 }
 
@@ -132,4 +132,8 @@ h5 {
 
 .hideSide {
 	animation: hideSide 1s;
+}
+
+.mag {
+	background-image: url('../../public/desktop2.png');
 }

@@ -73,7 +73,7 @@ const MagneticPush = () => {
 
 	return (
 		<div
-			className='rounded-md'
+			className='rounded-md mag'
 			style={{ width: '100%', height: '70vh', backgroundColor: '#5f7083' }}
 			onMouseMove={handleMouseMove}
 		>
